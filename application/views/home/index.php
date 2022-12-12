@@ -123,39 +123,58 @@
         <div class="row align-items-center d-flex justify-content-center cube-content">
             <div class="col-12 col-sm-10 col-md-8 p-0 p-lg-3 my-5">
                 <div class="box-form px-4 px-lg-5 py-5 f-inter">
+
+                    <?php if (@isset($_SESSION["failed"])) { ?>
+                    <div class="col-12 alert alert-danger alert-dismissible fade show" role="alert">
+                        <span class="notif-login f-poppins"><?= @$_SESSION["failed"] ?></span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <?php } ?>
+                    <?php if (@isset($_SESSION["success"])) { ?>
+                    <div class="col-12 alert alert-success alert-dismissible fade show" role="alert">
+                        <span class="notif-login f-poppins"><?= @$_SESSION["success"] ?></span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <?php } ?>
                     <h2 class="f-inter mb-4">Are you interested?</h2>
                     <a href="#">Apply here</a>
-                    <form class="row g-3 needs-validation mt-4" novalidate>
+                    <form class="row g-3 needs-validation mt-4" action="<?= base_url() ?>auth/mailproses" method="POST"
+                        onsubmit="return validate()">
+                        <input type="hidden" id="token" name="<?php echo $this->security->get_csrf_token_name(); ?>"
+                            value="<?php echo $this->security->get_csrf_hash(); ?>">
                         <div class="col-lg-12 form-tracklesscrypto">
                             <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="email" placeholder="Enter your email" required>
+                            <input type="text" class="form-control" id="email" placeholder="Enter your email"
+                                name="email" required>
                         </div>
                         <div class="col-lg-12 form-tracklesscrypto">
                             <label for="company" class="form-label">Company</label>
                             <input type="text" class="form-control" id="company"
-                                placeholder="Enter your company website">
+                                placeholder="Enter your company website" name="company">
                         </div>
                         <div class="col-lg-12 form-tracklesscrypto">
                             <label for="instagram" class="form-label">Instagram address</label>
                             <input type="text" class="form-control" id="instagram"
-                                placeholder="Enter your instagram address">
+                                placeholder="Enter your instagram address" name="instagram">
                         </div>
                         <div class="col-lg-12 form-tracklesscrypto">
                             <label for="twitter" class="form-label">Twitter address </label>
-                            <input type="text" class="form-control" id="twitter"
+                            <input type="text" class="form-control" id="twitter" name="twitter"
                                 placeholder="Enter your twitter address">
                         </div>
                         <div class="col-lg-12 form-tracklesscrypto">
                             <label for="facebook" class="form-label">Facebook address </label>
-                            <input type="text" class="form-control" id="facebook"
+                            <input type="text" class="form-control" id="facebook" name="facebook"
                                 placeholder="Enter your facebook address">
                         </div>
                         <div class="col-lg-12 form-tracklesscrypto">
                             <label for="linkedin" class="form-label">Linkedin address </label>
-                            <input type="text" class="form-control" id="linkedin" placeholder="Linkedin address ">
+                            <input type="text" class="form-control" id="linkedin" name="linkedin"
+                                placeholder="Linkedin address ">
                         </div>
                         <div class="col-12 text-center mt-5">
-                            <button class="btn btn-tracklesscrypto py-2 px-5" type="submit">Submit</button>
+                            <button id="btnconfirm" class="btn btn-tracklesscrypto py-2 px-5"
+                                type="submit">Submit</button>
                         </div>
                     </form>
                 </div>

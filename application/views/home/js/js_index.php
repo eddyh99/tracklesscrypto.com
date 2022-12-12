@@ -23,4 +23,10 @@ togglePassword2.addEventListener("click", function() {
     this.classList.toggle('fa-eye');
     this.classList.toggle('fa-eye-slash');
 });
+
+
+function validate() {
+    $("#btnconfirm").attr("disabled", true);
+    $("#swapconfirm").submit();
+}
 </script>
