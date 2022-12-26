@@ -185,7 +185,7 @@
             <div class="col-12 text-center">
                 <div class="powered mb-3">
                     <span class="f-monserat">Powered by </span>
-                    <img src="<?= base_url(); ?>assets/images/tracklessbankonly.png" alt="tracklesscrypto">
+                    <img src="<?= base_url(); ?>assets/images/tracklessproject.png" alt="tracklesscrypto">
                 </div>
                 <div class="sponsor d-flex justify-content-center flex-wrap">
                     <div class="sponsor-cover d-flex align-items-center mx-3 my-2">
