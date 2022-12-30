@@ -185,7 +185,7 @@
             <div class="col-12 text-center">
                 <div class="powered mb-3">
                     <span class="f-monserat">Powered by </span>
-                    <img src="<?= base_url(); ?>assets/images/tracklessbankonly.png" alt="tracklesscrypto">
+                    <img src="<?= base_url(); ?>assets/images/tracklessproject.png" alt="tracklesscrypto">
                 </div>
                 <div class="sponsor d-flex justify-content-center flex-wrap">
                     <div class="sponsor-cover d-flex align-items-center mx-3 my-2">
@@ -242,11 +242,11 @@
         </div>
         <div class="d-flex flex-wrap justify-content-end footer-menus" translate="no">
             <a href="https://tracklessproject.com" class="">TracklessProject</a> |
-            <a href="https://tracklessmail.com" class="active">TracklessMail</a> |
+            <a href="https://tracklessmail.com" class="">TracklessMail</a> |
             <a href="https://tracklesschat.com" class="">TracklessChat</a> |
             <a href="https://tracklesscompany.com" class="">TracklessCompany</a> |
             <a href="https://tracklessbank.com" class="">TracklessBank</a> |
-            <a href="https://tracklesscrypto.com" class="">TracklessCrypto</a> |
+            <a href="https://tracklesscrypto.com" class="active">TracklessCrypto</a> |
             <a href="https://tracklessmoney.com" class="">TracklessMoney</a>
         </div>
     </div>
