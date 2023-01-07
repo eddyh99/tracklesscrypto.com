@@ -236,7 +236,11 @@
                 <div class="col-4">&nbsp;</div>
                 <div class="col-4 footer-contact">
                     <h2>Contact us</h2>
-                    <span>Telegramchanel</span>
+                    <span>
+                        <a href="mailto:tracklesscrypto@tracklessmail.com" class="text-decoration-none">
+                            tracklesscrypto@tracklessmail.com
+                        </a>
+                    </span>
                 </div>
             </div>
         </div>
